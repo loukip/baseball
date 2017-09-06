@@ -1,0 +1,286 @@
+body {
+    box-sizing: border-box;
+}
+
+#controls {
+    margin-top: 2em;
+    margin-bottom: 2em;
+}
+
+.logo object {
+    height: 10em;
+}
+
+.logo p {
+    font-size: 3rem;
+    font-weight: bold;
+    margin: 10px 0 20px;
+}
+
+.calendar {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 5em;
+}
+
+.calendar .day,
+.calendar .day-label {
+    display: inline-block;
+    width: 13.9%;
+}
+
+.calendar .day-label {
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-align: center;
+    padding-bottom: 1em;
+}
+
+.calendar .day {
+    height: 6em;
+    padding: 1%;
+    font-size: 1.4rem;
+    border-top: 1px solid #000;
+    border-left: 1px solid #000;    
+}
+
+.calendar .day.extra {
+    border-top: 0;
+}
+
+.calendar .day.extra:last-of-type {
+    border-right: 1px solid #000;
+}
+
+.calendar .day .vis:empty + .at {
+    visibility: hidden;
+}
+
+.calendar .day:nth-child(7n+7) {
+    border-right: 1px solid #000;
+}
+
+.calendar .day:nth-child(1n+36) {
+    border-bottom: 1px solid #000;
+}
+
+.calendar .day .date {
+    text-align: right;
+}
+
+.calendar .day.off {
+    background-color: #ccc;
+}
+
+/* team colors */
+.calendar[data-team="ARI"] .day.here {
+    background-color: rgba(167,25,48,0.6);
+    color: #fff;
+}
+.calendar[data-team="ARI"] .day.away {
+    background-color: rgba(219,206,172,0.6);
+}
+.calendar[data-team="ATL"] .day.here {
+    background-color: rgba(1,72,126,0.6);
+    color: #fff;
+}
+.calendar[data-team="ATL"] .day.away {
+    background-color: rgba(214,13,57,0.6);
+    color: #fff;
+}
+.calendar[data-team="BAL"] .day.here {
+    background-color: rgba(244,99,42,0.6);
+}
+.calendar[data-team="BAL"] .day.away,
+.calendar[data-team="CWS"] .day.here,
+.calendar[data-team="PIT"] .day.away {
+    background-color: rgba(0,0,0,0.6);
+    color: #fff;
+}
+.calendar[data-team="BOS"] .day.here {
+    background-color: rgba(198,12,48,0.6);
+    color: #fff;
+}
+.calendar[data-team="BOS"] .day.away {
+    background-color: rgba(0,34,68,0.6);
+    color: #fff;
+}
+.calendar[data-team="CHI"] .day.here {
+    background-color: rgba(14,51,134,0.6);
+    color: #fff;
+}
+.calendar[data-team="CHI"] .day.away {
+    background-color: rgba(209,35,37,0.6);
+    color: #fff;
+}
+.calendar[data-team="CWS"] .day.away {
+    background-color: rgba(220,221,223,0.6);
+}
+.calendar[data-team="CIN"] .day.here {
+    background-color: rgba(198,1,31,0.6);
+    color: #fff;
+}
+.calendar[data-team="CIN"] .day.away {
+    background-color: rgba(255,255,255,0.6);
+}
+.calendar[data-team="CLE"] .day.here {
+    background-color: rgba(237,23,76,0.6);
+}
+.calendar[data-team="CLE"] .day.away {
+    background-color: rgba(0,43,92,0.6);
+    color: #fff;
+}
+.calendar[data-team="COL"] .day.here {
+    background-color: rgba(51,51,102,0.6);
+    color: #fff;
+}
+.calendar[data-team="COL"] .day.away {
+    background-color: rgba(202,205,205,0.6);
+}
+.calendar[data-team="DET"] .day.here {
+    background-color: rgba(16,41,63,0.6);
+    color: #fff;
+}
+.calendar[data-team="DET"] .day.away {
+    background-color: rgba(222,68,6,0.6);
+}
+.calendar[data-team="HOU"] .day.here {
+    background-color: rgba(7,40,84,0.6);
+    color: #fff;
+}
+.calendar[data-team="HOU"] .day.away {
+    background-color: rgba(255,127,0,0.6);
+}
+.calendar[data-team="KC"] .day.here {
+    background-color: rgba(21,49,126,0.6);
+    color: #fff;
+}
+.calendar[data-team="KC"] .day.away {
+    background-color: rgba(116,180,250,0.6);
+}
+.calendar[data-team="LAA"] .day.here {
+    background-color: rgba(206,17,65,0.6);
+    color: #fff;
+}
+.calendar[data-team="LAA"] .day.away {
+    background-color: rgba(0,50,98,0.6);
+    color: #fff;
+}
+.calendar[data-team="LAD"] .day.here {
+    background-color: rgba(0,85,150,0.6);
+    color: #fff;
+}
+.calendar[data-team="LAD"] .day.away {
+    background-color: rgba(255,255,255,0.6);
+}
+.calendar[data-team="MIA"] .day.here {
+    background-color: rgba(244,102,52,0.6);
+}
+.calendar[data-team="MIA"] .day.away {
+    background-color: rgba(4,130,204,0.6);
+}
+.calendar[data-team="MIL"] .day.here {
+    background-color: rgba(1,33,67,0.6);
+    color: #fff;
+}
+.calendar[data-team="MIL"] .day.away {
+    background-color: rgba(196,149,59,0.6);
+}
+.calendar[data-team="MIN"] .day.here {
+    background-color: rgba(4,36,98,0.6);
+    color: #fff;
+}
+.calendar[data-team="MIN"] .day.away {
+    background-color: rgba(211,17,69,0.6);
+    color: #fff;
+}
+.calendar[data-team="NYM"] .day.here {
+    background-color: rgba(0,70,133,0.6);
+    color: #fff;
+}
+.calendar[data-team="NYM"] .day.away {
+    background-color: rgba(247,116,44,0.6);
+}
+.calendar[data-team="NYY"] .day.here {
+    background-color: rgba(28,40,65,0.6);
+    color: #fff;
+}
+.calendar[data-team="NYY"] .day.away {
+    background-color: rgba(128,128,128,0.6);
+}
+.calendar[data-team="OAK"] .day.here {
+    background-color: rgba(0,72,58,0.6);
+    color: #fff;
+}
+.calendar[data-team="OAK"] .day.away {
+    background-color: rgba(255,190,0,0.6);
+}
+.calendar[data-team="PHI"] .day.here {
+    background-color: rgba(202,31,44,0.6);
+    color: #fff;
+}
+.calendar[data-team="PHI"] .day.away {
+    background-color: rgba(34,106,169,0.6);
+    color: #fff;
+}
+.calendar[data-team="PIT"] .day.here {
+    background-color: rgba(255,180,11,0.6);
+}
+.calendar[data-team="SD"] .day.here {
+    background-color: rgba(127,65,28,0.6);
+    color: #fff;
+}
+.calendar[data-team="SD"] .day.away {
+    background-color: rgba(254,195,37,0.6);
+}
+.calendar[data-team="SEA"] .day.here {
+    background-color: rgba(0,49,102,0.6);
+    color: #fff;
+}
+.calendar[data-team="SEA"] .day.away {
+    background-color: rgba(28,139,133,0.6);
+}
+.calendar[data-team="SF"] .day.here {
+    background-color: rgba(251,91,31,0.6);
+}
+.calendar[data-team="SF"] .day.away {
+    background-color: rgba(255,253,208,0.6);
+}
+.calendar[data-team="STL"] .day.here {
+    background-color: rgba(196,30,58,0.6);
+    color: #fff;
+}
+.calendar[data-team="STL"] .day.away {
+    background-color: rgba(10,34,82,0.6);
+    color: #fff;
+}
+.calendar[data-team="TB"] .day.here {
+    background-color: rgba(0,40,93,0.6);
+    color: #fff;
+}
+.calendar[data-team="TB"] .day.away {
+    background-color: rgba(121,189,238,0.6);
+}
+.calendar[data-team="TEX"] .day.here {
+    background-color: rgba(189,16,33,0.6);
+    color: #fff;
+}
+.calendar[data-team="TEX"] .day.away {
+    background-color: rgba(0,50,121,0.6);
+    color: #fff;
+}
+.calendar[data-team="TOR"] .day.here {
+    background-color: rgba(0,61,165,0.6);
+    color: #fff;
+}
+.calendar[data-team="TOR"] .day.away {
+    background-color: rgba(255,255,255,0.6);
+}
+.calendar[data-team="WSH"] .day.here {
+    background-color: rgba(186,18,43,0.6);
+    color: #fff;
+}
+.calendar[data-team="WSH"] .day.away {
+    background-color: rgba(20,34,90,0.6);
+    color: #fff;
+}

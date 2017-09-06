@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en-us">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>2017 MLB Schedule</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <div class="container">
+            <form>                        
+                <div class="row" id="controls">
+                    <div class="col-sm-2"></div>
+                    <div class="col-sm-3">
+                        <select id="teams" class="form-control">
+                            <option value="0">Select a team</option>
+                        </select>
+                    </div>
+                    <div class="col-sm-3">
+                        <select id="months" class="form-control">
+                            <option value="0">Select a month</option>
+                            <option>April</option>
+                            <option>May</option>
+                            <option>June</option>
+                            <option>July</option>
+                            <option>August</option>
+                            <option>September</option>
+                            <option>October</option>
+                        </select>
+                    </div>
+                    <div class="col-sm-2">
+                        <button type="submit" id="getcal" class="btn btn-primary">Get Calendar</button>
+                    </div>
+                    <div class="col-sm-2"></div>
+                </div>            
+            </form>    
+            
+            <div class="row">
+                <div class="col-sm-4"></div>
+                <div class="logo col-sm-4">
+                    <object data-team="" data="https://upload.wikimedia.org/wikipedia/en/a/a6/Major_League_Baseball_logo.svg" type="image/svg+xml" class="center-block"></object>
+                    <p class="sr-only"></p>
+                    <p class="text-center"><span></span> 2017</p>
+                </div>
+                <div class="col-sm-4"></div>
+            </div>
+            
+            <div class="calendar" data-team="">
+                <!-- day labels -->
+                <div class="day-label">Sun</div>
+                <div class="day-label">Mon</div>
+                <div class="day-label">Tue</div>
+                <div class="day-label">Wed</div>
+                <div class="day-label">Thu</div>
+                <div class="day-label">Fri</div>
+                <div class="day-label">Sat</div>
+                <!-- week 1 -->
+                <div class="day">
+                    <div class="date"></div>
+                    <div class="game"><span class="vis"></span> <span class="at">@</span> <span class="home"></span></div>
+                </div>
+                <div class="day">
+                    <div class="date"></div>
+                    <div class="game"><span class="vis"></span> <span class="at">@</span> <span class="home"></span></div>
+                </div>
+                <div class="day">
+                    <div class="date"></div>
+                    <div class="game"><span class="vis"></span> <span class="at">@</span> <span class="home"></span></div>
+                </div>
+                <div class="day">
+                    <div class="date"></div>
+                    <div class="game"><span class="vis"></span> <span class="at">@</span> <span class="home"></span></div>
+                </div>
+                <div class="day">
+                    <div class="date"></div>
+                    <div class="game"><span class="vis"></span> <span class="at">@</span> <span class="home"></span></div>
+                </div>
+                <div class="day">
+                    <div class="date"></div>
+                    <div class="game"><span class="vis"></span> <span class="at">@</span> <span class="home"></span></div>
+                </div>
+                <div class="day">
+                    <div class="date"></div>
+                    <div class="game"><span class="vis"></span> <span class="at">@</span> <span class="home"></span></div>
+                </div>
+                <!-- week 2 -->
+                <div class="day">
+                    <div class="date"></div>
+                    <div class="game"><span class="vis"></span> <span class="at">@</span> <span class="home"></span></div>
+                </div>
+                <div class="day">
+                    <div class="date"></div>
+                    <div class="game"><span class="vis"></span> <span class="at">@</span> <span class="home"></span></div>
+                </div>
+                <div class="day">
+                    <div class="date"></div>
+                    <div class="game"><span class="vis"></span> <span class="at">@</span> <span class="home"></span></div>
+                </div>
+                <div class="day">
+                    <div class="date"></div>
+                    <div class="game"><span class="vis"></span> <span class="at">@</span> <span class="home"></span></div>
+                </div>
+                <div class="day">
+                    <div class="date"></div>
+                    <div class="game"><span class="vis"></span> <span class="at">@</span> <span class="home"></span></div>
+                </div>
+                <div class="day">
+                    <div class="date"></div>
+                    <div class="game"><span class="vis"></span> <span class="at">@</span> <span class="home"></span></div>
+                </div>
+                <div class="day">
+                    <div class="date"></div>
+                    <div class="game"><span class="vis"></span> <span class="at">@</span> <span class="home"></span></div>
+                </div>
+                <!-- week 3 -->
+                <div class="day">
+                    <div class="date"></div>
+                    <div class="game"><span class="vis"></span> <span class="at">@</span> <span class="home"></span></div>
+                </div>
+                <div class="day">
+                    <div class="date"></div>
+                    <div class="game"><span class="vis"></span> <span class="at">@</span> <span class="home"></span></div>
+                </div>
+                <div class="day">
+                    <div class="date"></div>
+                    <div class="game"><span class="vis"></span> <span class="at">@</span> <span class="home"></span></div>
+                </div>
+                <div class="day">
+                    <div class="date"></div>
+                    <div class="game"><span class="vis"></span> <span class="at">@</span> <span class="home"></span></div>
+                </div>
+                <div class="day">
+                    <div class="date"></div>
+                    <div class="game"><span class="vis"></span> <span class="at">@</span> <span class="home"></span></div>
+                </div>
+                <div class="day">
+                    <div class="date"></div>
+                    <div class="game"><span class="vis"></span> <span class="at">@</span> <span class="home"></span></div>
+                </div>
+                <div class="day">
+                    <div class="date"></div>
+                    <div class="game"><span class="vis"></span> <span class="at">@</span> <span class="home"></span></div>
+                </div>
+                <!-- week 4 -->
+                <div class="day">
+                    <div class="date"></div>
+                    <div class="game"><span class="vis"></span> <span class="at">@</span> <span class="home"></span></div>
+                </div>
+                <div class="day">
+                    <div class="date"></div>
+                    <div class="game"><span class="vis"></span> <span class="at">@</span> <span class="home"></span></div>
+                </div>
+                <div class="day">
+                    <div class="date"></div>
+                    <div class="game"><span class="vis"></span> <span class="at">@</span> <span class="home"></span></div>
+                </div>
+                <div class="day">
+                    <div class="date"></div>
+                    <div class="game"><span class="vis"></span> <span class="at">@</span> <span class="home"></span></div>
+                </div>
+                <div class="day">
+                    <div class="date"></div>
+                    <div class="game"><span class="vis"></span> <span class="at">@</span> <span class="home"></span></div>
+                </div>
+                <div class="day">
+                    <div class="date"></div>
+                    <div class="game"><span class="vis"></span> <span class="at">@</span> <span class="home"></span></div>
+                </div>
+                <div class="day">
+                    <div class="date"></div>
+                    <div class="game"><span class="vis"></span> <span class="at">@</span> <span class="home"></span></div>
+                </div>
+                <!-- week 5 -->
+                <div class="day">
+                    <div class="date"></div>
+                    <div class="game"><span class="vis"></span> <span class="at">@</span> <span class="home"></span></div>
+                </div>
+                <div class="day">
+                    <div class="date"></div>
+                    <div class="game"><span class="vis"></span> <span class="at">@</span> <span class="home"></span></div>
+                </div>
+                <div class="day">
+                    <div class="date"></div>
+                    <div class="game"><span class="vis"></span> <span class="at">@</span> <span class="home"></span></div>
+                </div>
+                <div class="day">
+                    <div class="date"></div>
+                    <div class="game"><span class="vis"></span> <span class="at">@</span> <span class="home"></span></div>
+                </div>
+                <div class="day">
+                    <div class="date"></div>
+                    <div class="game"><span class="vis"></span> <span class="at">@</span> <span class="home"></span></div>
+                </div>
+                <div class="day">
+                    <div class="date"></div>
+                    <div class="game"><span class="vis"></span> <span class="at">@</span> <span class="home"></span></div>
+                </div>
+                <div class="day">
+                    <div class="date"></div>
+                    <div class="game"><span class="vis"></span> <span class="at">@</span> <span class="home"></span></div>
+                </div>
+            </div>
+        </div>
+        
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+        <script src="bbcal.js"></script>
+    </body>
+</html>
